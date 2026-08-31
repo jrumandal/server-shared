@@ -1,0 +1,54 @@
+{
+  "name": "@server/shared",
+  "version": "0.0.1",
+  "description": "Shared NestJS building blocks (Prisma, config, health, logging, error handling) for the micro-frontend backend services.",
+  "private": true,
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "prisma"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "jest",
+    "prisma:generate": "prisma generate --schema prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate deploy --schema prisma/schema.prisma",
+    "prisma:seed": "node prisma/seed.mjs",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.2.3",
+    "@nestjs/config": "^4.0.4",
+    "@nestjs/terminus": "^10.3.0",
+    "@prisma/client": "^6.19.3",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/jest": "~30.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "9.39.5",
+    "jest": "~30.3.0",
+    "prisma": "^6.19.3",
+    "ts-jest": "^29.4.7",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.35.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.24.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma"
+    ]
+  }
+}
