@@ -37,11 +37,11 @@ small and focused on its domain:
 ```
 server-shared/
 ├── .github/workflows/ci.yml   # lint → typecheck → test → build → publish
-├── .npmrc                     # @jrumandal → GitHub Packages
+├── .npmrc                     # @server → GitHub Packages
 ├── .nvmrc                     # Node 22
 ├── eslint.config.mjs          # flat ESLint 9 config
 ├── jest.config.cts            # Jest + ts-jest
-├── package.json               # @jrumandal/shared (publishable)
+├── package.json               # @jrumandal/shared (private)
 ├── prisma/                    # schema.prisma, seed.mjs, migrations/
 ├── src/
 │   ├── index.ts               # public API
