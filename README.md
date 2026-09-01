@@ -1,4 +1,4 @@
-# `@server/shared` — Shared Server Library
+# `@jrumandal/shared` — Shared Server Library
 
 Shared NestJS building blocks for the micro-frontend **backend** services. This
 repo is the **foundation** of the backend dependency graph: it is built and
@@ -41,7 +41,7 @@ server-shared/
 ├── .nvmrc                     # Node 22
 ├── eslint.config.mjs          # flat ESLint 9 config
 ├── jest.config.cts            # Jest + ts-jest
-├── package.json               # @server/shared (private)
+├── package.json               # @jrumandal/shared (private)
 ├── prisma/                    # schema.prisma, seed.mjs, migrations/
 ├── src/
 │   ├── index.ts               # public API
@@ -84,7 +84,7 @@ pnpm build
 ## Publishing
 
 Publishing is automated: on every push to `main`, after CI is green, the
-`publish` job builds the package and publishes `@server/shared` to
+`publish` job builds the package and publishes `@jrumandal/shared` to
 **GitHub Packages** (see `.npmrc`). The gateway and the three services resolve
 it from that registry.
 
