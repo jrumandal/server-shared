@@ -49,5 +49,8 @@
       "@prisma/engines",
       "prisma"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
